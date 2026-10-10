@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --grass: #5e9e32;
+    --grass-dark: #38651e;
+    --dirt: #79502e;
+    --dirt-dark: #4b3020;
+    --stone: #777777;
+    --stone-dark: #3f3f3f;
+    --panel: #c6c6c6;
+    --white: #ffffff;
+    --text: #222222;
+    --gold: #f7d51d;
+    --red: #b02e26;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    line-height: 1.9;
+    color: var(--text);
+
+    background-color: #79b7e8;
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 62%,
+            #79b849 62%,
+            #79b849 68%,
+            #80552f 68%,
+            #80552f 100%
+        );
+
+    background-attachment: fixed;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 22px 15px;
+    text-align: center;
+    color: var(--gold);
+    background-color: var(--stone-dark);
+    border: 4px solid #222222;
+    box-shadow: 0 6px 0 #222222;
+    font-size: 17px;
+    line-height: 1.8;
+    text-shadow: 3px 3px #333333;
+}
+
+h3 {
+    color: var(--grass-dark);
+    font-size: 12px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+label {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 18px auto 8px;
+    color: #ffffff;
+    text-shadow: 2px 2px #222222;
+}
+
+input[type="text"],
+select {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    min-height: 48px;
+    margin: 12px auto;
+    padding: 12px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #222222;
+    background-color: #eeeeee;
+    border: 4px solid #555555;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    border-radius: 0;
+    outline: none;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px #4b3020;
+}
+
+input::placeholder {
+    color: #777777;
+    font-size: 9px;
+}
+
+button {
+    display: block;
+    min-height: 48px;
+    max-width: 100%;
+    margin: 18px auto;
+    padding: 12px 20px;
+
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    line-height: 1.8;
+    color: #ffffff;
+
+    background-color: #668f35;
+    border: 4px solid #253f19;
+    border-top-color: #a1cb55;
+    border-left-color: #a1cb55;
+    border-radius: 0;
+
+    box-shadow: 0 4px 0 #222222;
+    cursor: pointer;
+    transition: filter 0.15s, transform 0.15s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #222222;
+}
+
+#userResult,
+#display,
+#weatherResult,
+#message {
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 22px;
+
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    background-color: var(--panel);
+    border: 4px solid #222222;
+    border-top-color: #ffffff;
+    border-left-color: #ffffff;
+    box-shadow: 5px 5px 0 #3b2819;
+}
+
+#userResult img {
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: 20px auto;
+    object-fit: cover;
+    image-rendering: pixelated;
+    border: 5px solid var(--stone-dark);
+    border-radius: 0;
+}
+
+#userResult p {
+    margin: 12px 0;
+    padding: 10px;
+    background-color: #a6a6a6;
+    border: 2px solid #777777;
+}
+
+#display {
+    color: #ffffff;
+    background-color: var(--grass-dark);
+    border-color: #253f19;
+    border-top-color: #91c54a;
+    border-left-color: #91c54a;
+}
+
+#message {
+    color: #ffffff;
+    background-color: var(--grass-dark);
+    border-color: #253f19;
+    border-top-color: #91c54a;
+    border-left-color: #91c54a;
+}
+
+#weatherResult {
+    background-color: #c6c6c6;
+}
+
+#weatherResult img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 12px auto;
+    image-rendering: pixelated;
+}
+
+#weatherResult p {
+    margin: 12px 0;
+    padding: 10px;
+    background-color: #a6a6a6;
+    border: 2px solid #777777;
+}
+
+#map {
+    width: 100%;
+    max-width: 1100px;
+    height: 400px;
+    margin: 30px auto;
+
+    border: 6px solid var(--dirt-dark);
+    border-top-color: #a67848;
+    border-left-color: #a67848;
+
+    box-shadow: 6px 6px 0 #222222;
+    background-color: #b6d9a0;
+}
+
+body.dark-mode {
+    color: #eeeeee;
+    background-color: #151515;
+
+    background-image:
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 62%,
+            #29471d 62%,
+            #29471d 68%,
+            #392719 68%,
+            #392719 100%
+        );
+}
+
+body.dark-mode h2 {
+    color: var(--gold);
+    background-color: #252525;
+    border-color: #111111;
+    box-shadow: 0 6px 0 #111111;
+}
+
+body.dark-mode label {
+    color: #ffffff;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode select {
+    color: #ffffff;
+    background-color: #303030;
+    border-color: #777777;
+    border-top-color: #999999;
+    border-left-color: #999999;
+}
+
+body.dark-mode #userResult,
+body.dark-mode #weatherResult {
+    color: #ffffff;
+    background-color: #454545;
+    border-color: #222222;
+    border-top-color: #777777;
+    border-left-color: #777777;
+}
+
+body.dark-mode #userResult p,
+body.dark-mode #weatherResult p {
+    background-color: #303030;
+    border-color: #666666;
+}
+
+body.dark-mode #display,
+body.dark-mode #message {
+    color: #ffffff;
+    background-color: #29471d;
+    border-color: #172a10;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 25px 12px;
+        font-size: 9px;
+    }
+
+    h2 {
+        padding: 16px 10px;
+        font-size: 13px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    input[type="text"],
+    select {
+        font-size: 9px;
+        min-height: 44px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 9px;
+        padding: 12px 8px;
+    }
+
+    #userResult,
+    #display,
+    #weatherResult,
+    #message {
+        padding: 14px;
+    }
+
+    #map {
+        height: 300px;
+    }
+}
+.site-header {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.site-header h1 {
+    padding: 25px 15px;
+    color: #f7d51d;
+    background-color: #3f3f3f;
+    border: 5px solid #222;
+    box-shadow: 6px 6px 0 #222;
+    font-size: 20px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.site-header > p {
+    color: white;
+    text-shadow: 2px 2px #222;
+}
+
+/* Navigation */
+.site-header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.site-header nav a {
+    padding: 12px 16px;
+    color: white;
+    background-color: #79502e;
+    border: 4px solid #4b3020;
+    border-top-color: #b17b47;
+    border-left-color: #b17b47;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    color: #f7d51d;
+    background-color: #38651e;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.welcome-section,
+.about-section {
+    margin: 30px 0;
+    padding: 25px;
+    background-color: #c6c6c6;
+    border: 5px solid #3f3f3f;
+    border-top-color: white;
+    border-left-color: white;
+    box-shadow: 6px 6px 0 #3b2819;
+}
+
+.welcome-section h2,
+#projects > h2,
+.about-section h2 {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.welcome-section > p,
+.about-section > p {
+    text-align: center;
+}
+
+.world-status {
+    padding: 12px;
+    color: white;
+    background-color: #38651e;
+    border: 3px solid #253f19;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 16px;
+    text-align: center;
+    background-color: #c6c6c6;
+    border: 5px solid #3f3f3f;
+    border-top-color: white;
+    border-left-color: white;
+    box-shadow: 5px 5px 0 #3b2819;
+}
+
+.project-icon {
+    margin: 5px 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    line-height: 1.4;
+}
+
+.project-card h3 {
+    margin: 8px 0 15px;
+    font-size: 11px;
+}
+
+.project-card p {
+    flex-grow: 1;
+    font-size: 9px;
+    line-height: 2.1;
+}
+
+.project-link {
+    display: block;
+    width: 100%;
+    margin-top: 18px;
+    padding: 12px 8px;
+    color: white;
+    background-color: #668f35;
+    border: 4px solid #253f19;
+    border-top-color: #a1cb55;
+    border-left-color: #a1cb55;
+    box-shadow: 0 4px 0 #222;
+    text-align: center;
+    text-decoration: none;
+    font-size: 9px;
+    line-height: 1.8;
+}
+
+.project-link:hover {
+    filter: brightness(1.2);
+    color: #f7d51d;
+}
+
+a:focus-visible {
+    outline: 4px solid #f7d51d;
+    outline-offset: 4px;
+}
+
+.site-footer {
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 25px 15px;
+    color: white;
+    background-color: #3f3f3f;
+    border: 5px solid #222;
+    box-shadow: 5px 5px 0 #222;
+    text-align: center;
+}
+
+.site-footer p {
+    font-size: 9px;
+    line-height: 2;
+}
+
+body.dark-mode .welcome-section,
+body.dark-mode .about-section,
+body.dark-mode .project-card {
+    color: white;
+    background-color: #454545;
+    border-color: #222;
+    border-top-color: #777;
+    border-left-color: #777;
+}
+
+body.dark-mode .project-card h3 {
+    color: #91c54a;
+}
+
+@media (max-width: 850px) {
+    .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .site-header h1 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-header h1 {
+        font-size: 13px;
+    }
+
+    .welcome-section,
+    .about-section {
+        padding: 15px;
+    }
+
+    .site-header nav {
+        gap: 8px;
+    }
+
+    .site-header nav a {
+        font-size: 9px;
+    }
+}
