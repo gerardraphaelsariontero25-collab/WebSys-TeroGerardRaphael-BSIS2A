@@ -1,0 +1,459 @@
+```css
+.dark-mode {
+    background-color: #242424;
+    color: #f5f5f5;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body .btn {
+    margin-top: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #17191c;
+    color: #f5f5f5;
+}
+
+/* =========================
+   SOCIAL SECTION
+========================= */
+
+.social-section {
+    background: #111315;
+    text-align: center;
+    padding: 17px 20px 23px;
+}
+
+.social-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 23px;
+    letter-spacing: .2px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #292d31;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.social-icon:hover {
+    background: #367d80;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MAIN FOOTER
+========================= */
+
+.footer-main {
+    min-height: 460px;
+    padding: 64px max(30px, calc((100% - 1405px) / 2));
+    display: grid;
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        1.4fr;
+    gap: 60px;
+}
+
+/* =========================
+   BRAND AREA
+========================= */
+
+.brand-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 62px;
+    margin-bottom: 37px;
+}
+
+/* Mojang */
+
+.mojang-logo {
+    width: 130px;
+    height: 111px;
+    background: #367d80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 29px;
+    font-weight: 900;
+    line-height: .78;
+    letter-spacing: -2px;
+}
+
+.mojang-logo span {
+    display: block;
+}
+
+/* Xbox */
+
+.xbox-logo {
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.xbox-symbol {
+    font-size: 43px;
+    margin-bottom: 3px;
+}
+
+.xbox-text {
+    font-size: 27px;
+    line-height: .9;
+    font-weight: 300;
+}
+
+/* Copyright */
+
+.copyright {
+    color: #b8bec4;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* Brand links */
+
+.brand-links {
+    display: flex;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.brand-links a {
+    color: #75b9b5;
+    text-decoration: none;
+}
+
+.brand-links a:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    color: #858b91;
+}
+
+/* =========================
+   FOOTER COLUMNS
+========================= */
+
+.footer-column {
+    margin-bottom: 18px;
+}
+
+.footer-column h3 {
+    color: #f5f5f5;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.footer-column a {
+    display: block;
+    color: #c5cbd0;
+    font-size: 14px;
+    line-height: 1.75;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    color: #75b9b5;
+}
+
+/* =========================
+   PIXEL ART
+========================= */
+
+.minecraft-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.pixel-scene {
+    position: relative;
+    width: 230px;
+    height: 90px;
+}
+
+/* Ground */
+
+.pixel-ground {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    right: 10px;
+    height: 30px;
+    background: #b9a77d;
+    border: 5px solid #8d7b55;
+    box-shadow:
+        0 5px 0 #d7c9a5,
+        0 10px 0 #8d7b55;
+}
+
+/* Characters */
+
+.pixel-character {
+    position: absolute;
+    bottom: 48px;
+    width: 22px;
+    height: 30px;
+    background: #5798b5;
+    border: 3px solid #202428;
+}
+
+.character-1 {
+    left: 72px;
+}
+
+.character-2 {
+    left: 99px;
+    background: #b98259;
+}
+
+/* Creeper */
+
+.creeper {
+    position: absolute;
+    bottom: 45px;
+    right: 54px;
+    width: 23px;
+    height: 34px;
+    background: #4d8d79;
+    border: 3px solid #284d40;
+}
+
+.creeper::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    width: 5px;
+    height: 5px;
+    background: #111315;
+    box-shadow: 9px 0 #111315;
+}
+
+.creeper::after {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 6px;
+    width: 6px;
+    height: 12px;
+    background: #111315;
+}
+
+/* =========================
+   BOTTOM BAR
+========================= */
+
+.footer-bottom {
+    min-height: 87px;
+    background: #222629;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:
+        0
+        max(30px, calc((100% - 1405px) / 2));
+    color: #e5e7e9;
+}
+
+/* Language */
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.globe {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e5e7e9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+/* Bottom links */
+
+.bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bottom-links a {
+    color: #c5cbd0;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.bottom-links a:hover {
+    text-decoration: underline;
+    color: #75b9b5;
+}
+
+/* Microsoft */
+
+.microsoft {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ms-logo {
+    width: 24px;
+    height: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+
+.ms-logo span:nth-child(1) {
+    background: #f25022;
+}
+
+.ms-logo span:nth-child(2) {
+    background: #0078d4;
+}
+
+.ms-logo span:nth-child(3) {
+    background: #00a4ef;
+}
+
+.ms-logo span:nth-child(4) {
+    background: #ffb900;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+    .brand-area {
+        grid-column: 1 / -1;
+    }
+
+    .minecraft-art {
+        display: none;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+    .social-icons {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        padding: 45px 25px;
+    }
+
+    .brand-area {
+        grid-column: auto;
+    }
+
+    .logos {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .mojang-logo {
+        width: 110px;
+        height: 95px;
+        font-size: 25px;
+    }
+
+    .xbox-text {
+        font-size: 22px;
+    }
+
+    .bottom-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
