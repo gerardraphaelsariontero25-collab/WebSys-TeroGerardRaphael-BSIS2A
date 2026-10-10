@@ -23,8 +23,8 @@ The project demonstrates my understanding of:
 
 ## Personalization Theme
 Project Brand Name: Project Code 
-Color Scheme Used: Throughout Weeks 1 to 7, the website designs gradually developed from a simple white background with default text colors into more customized layouts. Most of the later projects used blue buttons and accents, dark headers, and light backgrounds to keep the pages clean and readable. Some weeks also included darker themes, such as black backgrounds with white text, to provide a different appearance.
-Typography Used: In Week 1, I used the browser's default font style, which gave the webpage a basic appearance. In the following weeks, I started using sans-serif fonts, with bold headings and regular text to make the content easier to read.
+Color Scheme Used:  A combination of blue, dark, and Minecraft-inspired colors, including grass green, dirt brown, and sky blue. Blue accents, dark backgrounds, light backgrounds, and block-style buttons are used to keep the designs attractive and readable. Some projects also include dark mode with black backgrounds and white text.
+Typography Used: A combination of Bootstrap’s default sans-serif fonts and a pixel-style font inspired by Minecraft. Headings use bold text, while body text uses regular fonts for readability. Some pages also use the browser’s default serif font.
 Design Goal: The goal is to develop a website that is simple, organized, and easy to use. Each week introduces new skills and features, starting with basic HTML and gradually moving toward more advanced web development, ending with a full-stack application that can store and manage date using database.
 
 ---
@@ -47,7 +47,7 @@ Built an interactive webpage using HTML, CSS, and JavaScript. It includes a live
 A responsive website created using Bootstrap, with several content sections, a navigation bar with dropdown options, a rotating image carousel, a notification banner, and cards displaying different services.
 
 ### Week 6 - API & Client Storage
-Short description.
+Created a website using HTML, CSS, and JavaScript with several interactive features, including a GitHub user lookup, Google Maps integration, weather checker, local storage, and user preference settings. The website uses a consistent layout, navigation links, and customized styling to organize the different features.
 
 ### Week 7 - MiniFullStackStarter
 Developed a full-stack user management application using Node.js, Express, and MongoDB. The systems allows users to add, view, and delete users records through a simple interface connected to a REST API, with information stored in a database. 
