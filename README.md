@@ -23,8 +23,8 @@ The project demonstrates my understanding of:
 
 ## Personalization Theme
 Project Brand Name: Project Code 
-Color Scheme Used:
-Typography Used:
+Color Scheme Used: Throughout Weeks 1 to 7, the website designs gradually developed from a simple white background with default text colors into more customized layouts. Most of the later projects used blue buttons and accents, dark headers, and light backgrounds to keep the pages clean and readable. Some weeks also included darker themes, such as black backgrounds with white text, to provide a different appearance.
+Typography Used: In Week 1, I used the browser's default font style, which gave the webpage a basic appearance. In the following weeks, I started using sans-serif fonts, with bold headings and regular text to make the content easier to read.
 Design Goal: The goal is to develop a website that is simple, organized, and easy to use. Each week introduces new skills and features, starting with basic HTML and gradually moving toward more advanced web development, ending with a full-stack application that can store and manage date using database.
 
 ---
@@ -44,7 +44,7 @@ Designed a personal webpage using HTML and CSS, with a navigation bar, organized
 Built an interactive webpage using HTML, CSS, and JavaScript. It includes a live clock, a theme-switching, a task list, and contact form elements.
 
 ### Week 5 - Javascript Functions and Bootstrap
-Short description.
+A responsive website created using Bootstrap, with several content sections, a navigation bar with dropdown options, a rotating image carousel, a notification banner, and cards displaying different services.
 
 ### Week 6 - API & Client Storage
 Short description.
